@@ -1,35 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
+import ARScreen from './screens/ARScreen.js';
+import CameraScreen from './screens/CameraScreen.js';
+import HomeScreen from './screens/HomeScreen.js';
 
 const Tab = createBottomTabNavigator();
-
-function HomeScreen() {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Home!</Text>
-      </View>
-    );
-  }
-  
-function CameraScreen() {
-    return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <Text>Camera!</Text>
-        </View>
-    );
-}
-
-function ARScreen() {
-    return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <Text>AR!</Text>
-        </View>
-    )
-}
-
 
 export default function App() {
     return (
@@ -41,4 +19,4 @@ export default function App() {
         </Tab.Navigator>
       </NavigationContainer>
     );
-  }
+}
